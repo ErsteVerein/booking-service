@@ -15,6 +15,7 @@
 	<name>booking-service</name>
 	<description>Demo project for LinkedIn Learning Course</description>
 	<properties>
+		<jar-name>Booking-service</jar-name>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
@@ -64,7 +65,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>${jarName}</finalName>
+		<finalName>${jar-name}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
