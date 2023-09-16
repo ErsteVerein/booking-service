@@ -13,5 +13,22 @@ pipeline {
       }
     }
 
+    stage('Backend tests') {
+      parallel {
+        stage('Backend tests') {
+          steps {
+            sh './mvnw clean test'
+          }
+        }
+
+        stage('Package') {
+          steps {
+            sh './mvnw clean package'
+          }
+        }
+
+      }
+    }
+
   }
 }
